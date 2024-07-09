@@ -57,6 +57,7 @@ def check(text):
     start_time = time.time()
     r = _agent.get(base_url, params=payload, headers=headers)
     passed_time = time.time() - start_time
+    print(r)
 
     data = json.loads(r.text)
     html = data['message']['result']['html']
