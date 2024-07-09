@@ -56,10 +56,11 @@ def check(text):
 
     start_time = time.time()
     r = _agent.get(base_url, params=payload, headers=headers)
-    passed_time = time.time() - start_time
     print(r)
+    passed_time = time.time() - start_time
 
     data = json.loads(r.text)
+    print(data)
     html = data['message']['result']['html']
     result = {
         'result': True,
